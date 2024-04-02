@@ -2,8 +2,11 @@ import subprocess
 import sys
 import os
 
+#This was written for a UNIX system with ffmpeg installed
 def convert1(inputFiles):
+    #This cmd variable will hold the command to send to the unix terminal
     cmd = ["ffmpeg"]
+    #For each input file we will add the necessary arguments to the unix command to run ffmpeg.
     for i in inputFiles:
         cmd += ["-i", "{a}.mp3".format(a=i[:-4])]
     x = 0
