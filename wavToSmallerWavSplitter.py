@@ -2,7 +2,9 @@ import subprocess
 import sys
 import os
 
+#To run this code put .wav files whose audio length is longer than 30 seconds in the same directory as this file then run this file (run: python3 wavToSmallerWavSplitter.py)
 def convert2(inputFile):
+    #Each input file needs it's own run of the ffmpeg program. The appropriate command is built with strings.
     cmd = ["ffmpeg"]
     cmd += ["-i", "{a}".format(a=os.path.join("output/", inputFile))]
     cmd += ["-f", "segment", "-segment_time", "30", "-c", "copy", "output/output30/{a}_%03d.wav".format(a=inputFile[:-4])]
