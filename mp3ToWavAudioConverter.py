@@ -3,6 +3,7 @@ import sys
 import os
 
 #This was written for a UNIX system with ffmpeg installed
+#in order to run you need to put .mp3 files in the same folder/directory as this file, then run this python file ( run this command: python3 mp3ToWavAudioConverter.py)
 def convert1(inputFiles):
     #This cmd variable will hold the command to send to the unix terminal
     cmd = ["ffmpeg"]
